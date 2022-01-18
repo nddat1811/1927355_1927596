@@ -5,7 +5,7 @@ pipeline{
         stage('Build Docker Image') {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MMT-Dockerhub', url: 'https://github.com/nddat1811/flask.git']]])
+                    //checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'MMT-Dockerhub', url: 'https://github.com/nddat1811/flask.git']]])
                     bat 'docker build -t nddat1811/19127355_19127596 .'
                 }
             }
